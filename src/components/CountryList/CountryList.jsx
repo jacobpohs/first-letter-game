@@ -11,10 +11,10 @@ async function getData() {
     return res.json()
 }
 
-const CountryList = async (firstLetter) => {
+const CountryList = async ({firstLetter}) => {
     const countries = await getData();
     const countryName = [];
-    const searchTerm = 'C';
+    const searchTerm = firstLetter;
 
     countries.map((item) => (countryName.push(item.name.common)));
 
