@@ -1,14 +1,13 @@
 .container {
     display: flex;
-    border: 10px solid black;
-    height: 60vh;
+    height:fit-content;
+    margin: auto;
+    width: 80vw;
     flex-flow: row wrap;
-    align-content: center;
     justify-content: center;
 }
 
 .numbox {
-    background-color: burlywood;
     flex-basis: 100%;
 }
 
@@ -16,14 +15,22 @@
 }
 
 .answerbox {
-    flex-basis: 100%;
-    flex-wrap: nowrap;
-    background-color: rgb(34, 123, 123);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    height: fit-content;
+    gap: 10px 20px;
+    padding: 10px;
 }
 
 .answer {
+    justify-content: space-evenly;
+    size: 40;
+    height: 50px;
     background-color: gainsboro;
     border-radius: 10px;
+    padding: 5px;
     border: none;
     outline: none;
     font-size: 30px;
