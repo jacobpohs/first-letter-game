@@ -1,5 +1,6 @@
 'use client';
 import React from 'react'
+import styles from '@/app/components/Search/search.module.css'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
 
@@ -19,8 +20,13 @@ const Search = ({placeholder}) => {
         replace(`${pathname}?${params}`)
       }, 300);  
   return (
-    <div>
-        <input type="text" placeholder={placeholder} maxLength="1" onChange={handleSearch}></input>
+    <div className={styles.container}>
+        <input type="text" 
+               placeholder={placeholder} 
+               maxLength="1" 
+               className={styles.letterinput}
+               onChange={handleSearch}>
+        </input>
     </div>
   )
 }

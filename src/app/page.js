@@ -11,7 +11,7 @@ export default async function Home({searchParams}) {
 
   return (
     <main className={styles.main}>
-      <h1>Pick a letter</h1>
+      <h1 className={styles.prompt}>Pick a letter</h1>
       <Search />
       <CountryList countries={countries} firstLetter={q} />
     </main>

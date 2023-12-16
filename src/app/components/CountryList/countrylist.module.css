@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.countrynum {
+    flex: 1 100%;
+}
+
+.answerbox {
+    background-color: rgb(34, 123, 123);
+    order: 2;
+}
+
+.answer {
+    background-color: gainsboro;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 30px;
+}
