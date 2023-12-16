@@ -1,23 +1,19 @@
-
-'use client';
+import React from 'react';
 import Image from 'next/image'
 import styles from './page.module.css'
-import CountryList from '@/components/CountryList/CountryList';
-import { useState } from 'react';
+import CountryList from '@/app/components/CountryList/CountryList';
+import Search from './components/Search/search';
+import { fetchCountries } from './lib/data';
 
-const handleLetterSubmit = () => {
-  // const [value, setValue] = useState('');
-}
+export default async function Home({searchParams}) {
+  const q = searchParams?.q || "";
+  const countries = await fetchCountries(q);
 
-export default function Home() {
   return (
     <main className={styles.main}>
       <h1>Pick a letter</h1>
-      <form>
-        <input type="text"></input>
-      </form>
-      <button></button>
-      <CountryList firstLetter='C'/>
+      <Search />
+      <CountryList countries={countries} firstLetter={q} />
     </main>
   )
 }
