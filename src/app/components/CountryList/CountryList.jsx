@@ -12,12 +12,16 @@ const CountryList = async ({countries, firstLetter}) => {
   } else {
     return (
       <div className={styles.container}>
-          <h3 className={styles.countrynum}>{`There are ${countries.length} countries that start with '${firstLetter}'`}</h3>
-          <div className={styles.answerbox}>
-            {countries.map(country=>(
-                <input className={styles.answer}></input>
-            ))}
-          </div>
+        <div className={styles.numbox}>
+          <h3 className={styles.countrynum}>
+            {`There are ${countries.length} countries that start with '${firstLetter}'`}
+          </h3>
+        </div>
+        <div className={styles.answerbox}>
+          {countries.map(country=>(
+              <input className={styles.answer}></input>
+          ))}
+        </div>
       </div>
     )
   }

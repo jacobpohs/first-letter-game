@@ -1,15 +1,24 @@
 .container {
     display: flex;
+    border: 10px solid black;
+    height: 60vh;
     flex-flow: row wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.numbox {
+    background-color: burlywood;
+    flex-basis: 100%;
 }
 
 .countrynum {
-    flex: 1 100%;
 }
 
 .answerbox {
+    flex-basis: 100%;
+    flex-wrap: nowrap;
     background-color: rgb(34, 123, 123);
-    order: 2;
 }
 
 .answer {
