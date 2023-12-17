@@ -9,9 +9,9 @@ const CountryList = ({countries, firstLetter}) => {
   const handleAnswer = useDebouncedCallback((e)=> {
     if (e.target.value) {
       if (e.target.value.length > 4 && countries.includes(e.target.value)) {
-        checkAnswer(!answer);
+        checkAnswer(true);
       }
-    } else if (!e.target.value){
+    } else if (!e.target.value) {
       checkAnswer(false);
     }
   }, 300);
