@@ -15,7 +15,7 @@ const AnswerButton = ({countries}) => {
         </button>
         <div style={{display: revealAnswer?"block":"none"}}>
             {countries.map(country=>(
-                <p>{country}</p>
+                <p key={country}>{country}</p>
             ))}
         </div>
     </div>

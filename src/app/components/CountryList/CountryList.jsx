@@ -1,20 +1,9 @@
 'use client';
 import React, { useState } from 'react'
-import { useDebouncedCallback } from 'use-debounce';
+import AnswerInput from './AnswerInput/AnswerInput';
 import styles from '@/app/components/CountryList/countrylist.module.css'
 
 const CountryList = ({countries, firstLetter}) => {
-  const [answer, checkAnswer] = useState(false);
-
-  const handleAnswer = useDebouncedCallback((e)=> {
-    if (e.target.value) {
-      if (e.target.value.length > 4 && countries.includes(e.target.value)) {
-        checkAnswer(true);
-      }
-    } else if (!e.target.value) {
-      checkAnswer(false);
-    }
-  }, 300);
 
   if (firstLetter == '' || firstLetter == ' '){
     return (
@@ -31,8 +20,10 @@ const CountryList = ({countries, firstLetter}) => {
           </h3>
         </div>
         <div className={styles.answerbox}>
-          {countries.map(country=>(
-                <input key={country} className={styles.answer} onChange={handleAnswer} style={{backgroundColor: answer?"green":"gainsboro"}}></input>
+          {countries.map((country, index, thisValue) => (
+
+                <AnswerInput key={country} countries={countries} country={country} index={index} />
+                
           ))}
         </div>
       </div>
