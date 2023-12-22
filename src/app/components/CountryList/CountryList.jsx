@@ -21,9 +21,7 @@ const CountryList = ({countries, firstLetter}) => {
         </div>
         <div className={styles.answerbox}>
           {countries.map((country, index, thisValue) => (
-
-                <AnswerInput key={country} countries={countries} country={country} index={index} />
-                
+            <AnswerInput key={country} countries={countries} country={country} index={index} />    
           ))}
         </div>
       </div>

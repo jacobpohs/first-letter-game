@@ -3,8 +3,8 @@ import Image from 'next/image'
 import styles from './page.module.css'
 import CountryList from '@/app/components/CountryList/CountryList';
 import Search from './components/Search/search';
-import { fetchCountries } from './lib/data';
 import AnswerButton from './components/AnswerButton/AnswerButton';
+import { fetchCountries } from './lib/data';
 
 export default async function Home({searchParams}) {
   const q = searchParams?.q || "";

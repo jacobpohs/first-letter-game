@@ -5,6 +5,9 @@
     width: 80vw;
     flex-flow: row wrap;
     justify-content: center;
+    /* animation: fadeInAnimation ease .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; */
 }
 
 .numbox {
@@ -12,6 +15,7 @@
 }
 
 .countrynum {
+
 }
 
 .answerbox {
@@ -22,4 +26,16 @@
     height: fit-content;
     gap: 10px 20px;
     padding: 10px;
+    /* animation: fadeInAnimation ease .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; */
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }

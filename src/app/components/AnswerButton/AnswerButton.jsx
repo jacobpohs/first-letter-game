@@ -10,12 +10,15 @@ const AnswerButton = ({countries}) => {
     }
   return (
     <div className={styles.container}>
-        <button className={styles.answerbutton} onClick={handleAnswer}>
-            Reveal Answer
-        </button>
-        <div style={{display: revealAnswer?"block":"none"}}>
+        <div className={styles.buttonbox}> 
+            <button className={styles.answerbutton} onClick={handleAnswer}>
+                Reveal Answer
+            </button>
+        </div>
+
+        <div className={styles.answerbox} style={{display: revealAnswer?"block":"none"}}>
             {countries.map(country=>(
-                <p key={country}>{country}</p>
+                <h3 key={country}>{country}</h3>
             ))}
         </div>
     </div>
