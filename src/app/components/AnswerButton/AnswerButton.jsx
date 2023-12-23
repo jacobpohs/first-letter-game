@@ -15,10 +15,9 @@ const AnswerButton = ({countries}) => {
                 Reveal Answer
             </button>
         </div>
-
         <div className={styles.answerbox} style={{display: revealAnswer?"block":"none"}}>
-            {countries.map(country=>(
-                <h3 key={country}>{country}</h3>
+            {countries.map(country => (
+                    <p key={country}>{country}</p>
             ))}
         </div>
     </div>

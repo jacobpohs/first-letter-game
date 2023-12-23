@@ -1,15 +1,13 @@
 .container {
     display: flex;
-    height: fit-content;
-    margin: auto;
-    width: 80vw;
     flex-flow: row wrap;
     justify-content: center;
-
+    background-color: burlywood;
 }
 
 .buttonbox{
     flex-basis: 100%;
+    background-color: blueviolet;
 }
 
 .answerbutton {
@@ -21,24 +19,23 @@
     border: none;
     outline: none;
     text-align: center;
-
 }
 
 .answerbox {
-    /* flex-basis: 100%; */
+    display: flex;
+    flex-basis: 100%;
     flex-flow: row wrap;
-    /* gap: 10px 20px; */
-    /* padding: 10px; */
+    justify-content: center;
+    align-items: flex-start;
+    height: fit-content;
+    gap: 10px 20px;
+    padding: 10px;
     background-color: aqua;
 }
 
-.answerbox h3 {
-    flex-basis: 30%;
-    justify-content: flex-start;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    align-content: flex-start;
-    background-color: coral;
+.answerbox p {
+    justify-content: space-evenly;
     width: fit-content;
     padding: 10px;
+    background-color: coral;
 }
